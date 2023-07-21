@@ -37,6 +37,8 @@ class Graph extends Component<IProps, {}> {
     }
     if (this.table) {
       // Load the `table` in the `<perspective-viewer>` DOM reference.
+
+      // Notes - Instead of the prices of the individual stocks, their ratio is shown on the graph to be monitored since the correlation is more important than the individual prices. The trigger alert is coded red to make it easier for the user to identify when the ratio crosses the thresholds.
       elem.load(this.table);
       elem.setAttribute('view', 'y_line');
       elem.setAttribute('row-pivots', '["timestamp"]');
